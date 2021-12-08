@@ -1,0 +1,19 @@
+1. HTML한글이 깨져요
+ = Select First 버튼 클릭 할 것 -> 잘못된 한글 수정
+ = 이미 UTF-8로 변경한다는 버튼 클릭했다면? 지우고 다시 만든다
+
+2. HTML 태그를 수정했는데 그 전 출력결과가 나와요
+ = HTML파일을 실행시킨 후 새로고침
+
+3. 서버파일을 실행하는데 404오류가 나와요
+ = html action부분과 Servlet @WebServlet("/ex05") 부분 확인
+   -> 서버재부팅 -> 컴퓨터재부팅 -> 선생님호출
+
+4. doGet, doPost는 메소드는 어떤건가요
+ = get방식과 post을 처리해주는 메소드
+    하나의 Serlvet파일에서 get과 post방식 두 가지를 모두 처리해야 할 때 사용
+
+ 5. 처음 설치한 톰캣의 위치를 변경X
+ 
+ 6. 프로젝트 파일을 옮기는 방법 
+ import -> General -> Existing Projects into...-> 프로젝트 폴더 선택 후 가져오기.

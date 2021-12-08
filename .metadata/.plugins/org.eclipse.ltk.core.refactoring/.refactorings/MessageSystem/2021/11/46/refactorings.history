@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;my_smart_count/src&apos;&#x0D;&#x0A;- Original project: &apos;MessageSystem&apos;&#x0D;&#x0A;- Destination element: &apos;my_smart_count/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MessageSystem/src/com.controller&#x0D;&#x0A;     MessageSystem/src/com.model" description="Copy packages" destination="=my_smart_count/src" element1="/src&lt;com.controller" element2="/src&lt;com.model" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1636291399704" version="1.0"/>
+</session>

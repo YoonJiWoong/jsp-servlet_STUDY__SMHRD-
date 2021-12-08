@@ -1,0 +1,113 @@
+package test111;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
+
+@WebServlet("/WriteServiceCenter")
+public class WriteServiceCenter extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		
+		
+		request.setCharacterEncoding("euc-kr");
+		HttpSession session = request.getSession();
+		MDTO vo = (MDTO)session.getAttribute("member");
+		String board_contents = request.getParameter("board_contents");
+		GregorianCalendar now = new GregorianCalendar();
+		now.setTimeZone(TimeZone.getTimeZone("Asia/Seoul"));
+		String board_date = now.get(Calendar.YEAR) +"-"+ (now.get(Calendar.MONTH)+1) + "-"+now.get(Calendar.DATE);
+		String board_title = request.getParameter("board_title");
+		String m_id = vo.getId();
+		Connection conn = null;
+		PreparedStatement psmt	= null;
+		ResultSet rs = null;
+		java.sql.Date d = java.sql.Date.valueOf(board_date);
+		
+		try {
+			
+			
+			
+			
+			
+			
+			
+			
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String user = "hr";
+			String password = "hr";
+			conn = DriverManager.getConnection(url, user, password);
+			
+		//	String sql = "select board_num from BOARD";
+		//	psmt	= conn.prepareStatement(sql);
+			
+			
+			
+			String sql = "insert into BOARD values(Board_sq,?,?,?,?)";
+			psmt	= conn.prepareStatement(sql);
+			
+			
+			psmt.setString(1, board_title);
+			psmt.setString(2, board_contents);
+			psmt.setDate(3, d);
+			psmt.setString(4, m_id);
+		
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				
+				System.out.println("등록성공");
+				response.sendRedirect("main.jsp");
+			}else {
+				System.out.println("등록실패");
+				response.sendRedirect("main.jsp");
+			}
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			//1. 지역변수
+			//2. 예외처리
+			try {
+				if(rs != null) {
+					rs.close();
+				}
+				if(psmt != null) {
+					psmt.close();
+				}
+				if(conn != null) {
+					conn.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+			
+		}
+	
+	
+	
+	
+	}
+
+}

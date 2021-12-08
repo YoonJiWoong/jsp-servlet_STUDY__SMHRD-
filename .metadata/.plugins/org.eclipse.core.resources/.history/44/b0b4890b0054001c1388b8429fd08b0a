@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	      <table border="1">
+                                  <tr>
+                                     <th width="200" height="50" style="text-align:center">제목</th>
+                                     <th width="500" height="50" style="text-align:center"><input type="text" name="board_title"></th>
+                                  </tr>
+                                  
+                                  <tr>
+                                     <th width="200" height="50"style="text-align:center">회원아이디</th>
+                                     <th width="500" height="50" style="text-align:center"><%=vo.getM_id()%></th>
+                                  </tr>   
+                                 
+                                  <tr>
+                                     <th width="200" height="50"style="text-align:center">날짜</th>
+                                     <th width="500" height="50" style="text-align:center" name="board_date"><%=now %></th>
+                               </tr>
+                                  <tr>
+                                     <th colspan="2" width="200" height="50"style="text-align:center">내용</th>
+                                     
+                               </tr>
+                                <tr>
+                               <td colspan="2" width="500" height="50" style="text-align:center"><textarea cols="50" rows="5" name="board_contents"></textarea></td>
+                               </tr>
+                               </table>
+	
+	
+
+</body>
+</html>

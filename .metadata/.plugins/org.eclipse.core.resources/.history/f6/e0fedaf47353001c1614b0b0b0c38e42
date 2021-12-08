@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+   <form action="join.jsp">
+	   ID <input type="text" name="id"><br>
+       PW <input type="password" name="pw"><br>
+
+       <input type="submit" value="로그인">
+       <br>
+       <button onclick="href=">회원가입완료</button>
+       
+       </form>
+       
+
+</body>
+</html>

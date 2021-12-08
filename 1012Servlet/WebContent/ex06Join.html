@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	tr{
+		height: 40px;
+	}
+</style>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>	
+	<form action="ex06"  method="post">
+		<fieldset>
+			<legend>Join Page</legend>		
+			<table align="center">
+				<tr>
+					<td><label for="id">ID</label></td>
+					<td><input type="text" name="id" id="id"></td>
+				</tr>
+				<tr>
+					<td><label for="pw">PW</label></td>
+					<td><input type="password" name="pw" id="pw"></td>
+				</tr>			
+				<tr>
+					<td><label for="name">NAME</label></td>
+					<td><input type="text" name="name" id="name"></td>
+				</tr>				
+				<tr>
+					<td><label for="email">EMAIL</label></td>
+					<td><input type="email" name="email" id="email" required="required"></td>
+				</tr>				
+				<tr>
+					<td><label for="tel">TEL</label></td>
+					<td><input type="tel" name="tel" id="tel" required="required" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="###-####-#### 형식으로 입력"></td>
+				</tr>					
+				<tr>
+					<td><label for="gender">GENDER&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></td>
+					<td>MAN<input type="radio" name="gender" id="gender">WOMEN<input type="radio" name="gender" id="gender"></td>
+				</tr>
+				<tr>
+					<td><label for="hobby">HOBBY</label></td>
+					<td>SPORT<input type="checkbox" name="hobby" id="hobby" value="SPORT">STUDY<input type="checkbox" name="hobby" id="hobby" value="STUDY">EATING<input type="checkbox" name="hobby" id="hobby" value="EATING" ></td>
+				</tr>
+				<tr>
+					<td><label for="birth">BIRTHDAY</label></td>
+					<td><input type="date" name="birth" id="birth"></td>
+				</tr>
+				<tr>
+					<td><label for="color">COLOR</label></td>
+					<td><input type="color" name="color" id="color"></td>
+				</tr>
+				<tr>
+					<td><label for="country">COUNTRY</label></td>
+					<td><select id="country" name="country">
+					<option>choice..</option>
+					<option>KOREA</option>
+					<option>USA</option>
+					</select>
+					</td>
+				</tr>	
+				<tr>
+					<td><label for="talk">TALK</label></td>
+					<td><textarea name ="talk" id="talk" rows="10" cols="30"></textarea>
+					</td>
+				</tr>																				
+			</table>
+		</fieldset>
+		
+		<input type="submit" value="전송" >
+		
+	</form>
+</body>
+</html>
