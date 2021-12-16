@@ -27,6 +27,8 @@ C:\Users\smhrd\Desktop\웹(Web)\.metadata\.plugins\org.eclipse.jst.jsp.core\jspse
 \test\src
 C:\Users\smhrd\Desktop\웹(Web)\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4107643739.index
 \연습하기용\src
+C:\Users\smhrd\Documents\GitHub\jsp-servlet_STUDY__SMHRD-\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2284948966.index
+\1015JDBC_1\src
 C:\Users\smhrd\Desktop\웹(Web)\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1798043985.index
 \smartTest\src
 C:\Users\smhrd\Desktop\웹(Web)\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1743573475.index
